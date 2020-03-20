@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEditor;
 
 namespace IndiePixel
-{
+{   
+    //custom editor to override IP_XboxAirplane_Input
     [CustomEditor(typeof(IP_XboxAirplane_Input))]
     public class IP_XboxAirplaneInput_Editor : Editor 
     {
@@ -17,11 +18,13 @@ namespace IndiePixel
         #region Bultin Methods
         void OnEnable()
         {
+            //the object being inspected
             targetInput = (IP_XboxAirplane_Input)target;
         }
 
         public override void OnInspectorGUI()
         {
+            //default GUI
             base.OnInspectorGUI();
 
             string debugInfo = "";
@@ -38,6 +41,7 @@ namespace IndiePixel
             EditorGUILayout.TextArea(debugInfo, GUILayout.Height(100));
             GUILayout.Space(20);
 
+            //Update Inspector
             Repaint();
         }
         #endregion

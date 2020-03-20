@@ -2,3 +2,4 @@ sceneSetups:
 - path: Assets/AirplanePhysics/Scenes/Airplane_Setup_Dev.unity
   isLoaded: 1
   isActive: 1
+  isSubScene: 0
