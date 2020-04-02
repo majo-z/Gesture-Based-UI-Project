@@ -32,6 +32,14 @@ namespace IndiePixel
         // so that actions are only performed upon making them rather than every frame during
         // which they are active.
         private Pose _lastPose = Pose.Unknown;
+		
+		// Start is called once.
+		  private void Start()
+    {
+        _antiYaw = Quaternion.FromToRotation(
+              new Vector3(myo.transform.forward.x, 0, myo.transform.forward.z),
+              new Vector3(0, 0, 1)); 
+    }
 
         // Update is called once per frame.
         void Update()
