@@ -53,7 +53,7 @@ namespace IndiePixel
             {
                 _lastPose = thalmicMyo.pose;
 
-                if (thalmicMyo.pose == Pose.FingersSpread)
+                if (thalmicMyo.pose == Pose.DoubleTap)
                 {
                     updateReference = true;
 
